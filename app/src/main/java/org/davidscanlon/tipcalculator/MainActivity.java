@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         total_input = (EditText) findViewById(R.id.total_field);
 
+        // add an event listener to activate percent buttons once a number is inputted
         total_input.addTextChangedListener(new TextWatcher() {
 
             @Override
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(s.toString().trim().length()==0){
+                if (s.toString().trim().length() == 0) {
                     btn15.setEnabled(false);
                     btn20.setEnabled(false);
                     btn25.setEnabled(false);
@@ -65,9 +66,12 @@ public class MainActivity extends AppCompatActivity {
         // create objects to get control of what is inputted into the total field
         // and what is outputted to the tip output
         TextView tip_output = (TextView) findViewById(R.id.tip_text);
+        TextView final_output = (TextView) findViewById(R.id.total_final_text);
 
         double total = Double.parseDouble(total_input.getText().toString());
         double tip;
+        double finalAmount;
+
         // getId returns an int, so we need to compare the int to the ids
         // of the buttons
         int id = view.getId();
@@ -75,18 +79,24 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.button_15) {
 
-                tip = total * .15;
-                tip_output.setText("Tip: $" + String.format("%.2f", tip));
+            tip = total * .15;
+            finalAmount = total + tip;
+            tip_output.setText("Tip: $" + String.format("%.2f", tip));
+            final_output.setText("Final Amount: $" + String.format("%.2f", finalAmount));
 
         } else if (id == R.id.button_20) {
 
-                tip = total * .20;
-                tip_output.setText("Tip: $" + String.format("%.2f", tip));
+            tip = total * .20;
+            finalAmount = total + tip;
+            tip_output.setText("Tip: $" + String.format("%.2f", tip));
+            final_output.setText("Final Amount: $" + String.format("%.2f", finalAmount));
 
         } else if (id == R.id.button_25) {
 
-                tip = total * .25;
-                tip_output.setText("Tip: $" + String.format("%.2f", tip));
+            tip = total * .25;
+            finalAmount = total + tip;
+            tip_output.setText("Tip: $" + String.format("%.2f", tip));
+            final_output.setText("Final Amount: $" + String.format("%.2f", finalAmount));
 
         }
     }

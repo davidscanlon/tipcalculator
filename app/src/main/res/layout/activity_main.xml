@@ -76,7 +76,7 @@
     </LinearLayout>
 
     <TextView
-        android:text="tip"
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="54dp"
@@ -84,6 +84,17 @@
         android:layout_weight="1"
         android:textSize="24sp"
         android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:id="@+id/total_final_text"
+        android:layout_weight="1"
+        android:textSize="24sp"
+        android:layout_below="@+id/tip_text"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
