@@ -20,16 +20,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // get control of the three tip buttons and set them to be disabled
+        // get control of the three tip buttons
         btn15 = (Button) findViewById(R.id.button_15);
         btn20 = (Button) findViewById(R.id.button_20);
         btn25 = (Button) findViewById(R.id.button_25);
-
-
-        btn15.setEnabled(false);
-        btn20.setEnabled(false);
-        btn25.setEnabled(false);
-
 
         total_input = (EditText) findViewById(R.id.total_field);
 
