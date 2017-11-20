@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
         btn20 = (Button) findViewById(R.id.button_20);
         btn25 = (Button) findViewById(R.id.button_25);
 
+        btn15.setEnabled(false);
+        btn20.setEnabled(false);
+        btn25.setEnabled(false);
+
         total_input = (EditText) findViewById(R.id.total_field);
 
         // add an event listener to activate percent buttons once a number is inputted
